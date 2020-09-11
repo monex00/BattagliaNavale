@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <script src="engine.js"></script>
+    <script type="text/javascript" src="data.json"></script>
+    <title>Battaglia Navale</title>
+</head>
+<body onload="setTimeout(start, 2000)">
+  <div id="intro" class= "centerAll">
+    <h1>Battaglia Navale</h1>
+  </div>
+  <center>
+    <div id="theMenu" style="display: none;" class="center">
+      <h2 class="heading">Seleziona Modalità di gioco</h2>
+      <br><button type="button"  class="button" id="bot" onclick="selezioneMod('bot')">Giocatore vs bot</button>
+      <br><br><button type="button" class="button" id="players" onclick="selezioneMod('players')">Giocatore vs Giocatore</button>
+      <br><br><label for="json">JSON:</label> 
+      <input type="checkbox" id="json">
+    </div>
+  </center>
+    <div id="theBody" style="display: none;">
+      <table  class="center">
+        <tr>
+            <td>
+          <legend><h3>Prima flotta</h3></legend>
+          <table id="table1">
+            <tr>
+              <td>10</td>
+              <td><button type="button" class="casella" id = '0A10' onclick="clickCas('0A10')"></button></td>
+              <td><button type="button" class="casella" id = '0B10' onclick="clickCas('0B10')"></button></td>
+              <td><button type="button" class="casella" id = '0C10' onclick="clickCas('0C10')"></button></td>
+              <td><button type="button" class="casella" id = '0D10' onclick="clickCas('0D10')"></button></td>
+              <td><button type="button" class="casella" id = '0E10' onclick="clickCas('0E10')"></button></td>
+              <td><button type="button" class="casella" id = '0F10' onclick="clickCas('0F10')"></button></td>
+              <td><button type="button" class="casella" id = '0G10' onclick="clickCas('0G10')"></button></td>
+              <td><button type="button" class="casella" id = '0H10' onclick="clickCas('0H10')"></button></td>
+              <td><button type="button" class="casella" id = '0I10' onclick="clickCas('0I10')"></button></td>
+              <td><button type="button" class="casella" id = '0J10' onclick="clickCas('0J10')"></button></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><button type="button" class="casella" id = '0A9' onclick="clickCas('0A9')"></button></td>
+              <td><button type="button" class="casella" id = '0B9' onclick="clickCas('0B9')"></button></td>
+              <td><button type="button" class="casella" id = '0C9' onclick="clickCas('0C9')"></button></td>
+              <td><button type="button" class="casella" id = '0D9' onclick="clickCas('0D9')"></button></td>
+              <td><button type="button" class="casella" id = '0E9' onclick="clickCas('0E9')"></button></td>
+              <td><button type="button" class="casella" id = '0F9' onclick="clickCas('0F9')"></button></td>
+              <td><button type="button" class="casella" id = '0G9' onclick="clickCas('0G9')"></button></td>
+              <td><button type="button" class="casella" id = '0H9' onclick="clickCas('0H9')"></button></td>
+              <td><button type="button" class="casella" id = '0I9' onclick="clickCas('0I9')"></button></td>
+              <td><button type="button" class="casella" id = '0J9' onclick="clickCas('0J9')"></button></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><button type="button" class="casella" id = '0A8' onclick="clickCas('0A8')"></button></td>
+              <td><button type="button" class="casella" id = '0B8' onclick="clickCas('0B8')"></button></td>
+              <td><button type="button" class="casella" id = '0C8' onclick="clickCas('0C8')"></button></td>
+              <td><button type="button" class="casella" id = '0D8' onclick="clickCas('0D8')"></button></td>
+              <td><button type="button" class="casella" id = '0E8' onclick="clickCas('0E8')"></button></td>
+              <td><button type="button" class="casella" id = '0F8' onclick="clickCas('0F8')"></button></td>
+              <td><button type="button" class="casella" id = '0G8' onclick="clickCas('0G8')"></button></td>
+              <td><button type="button" class="casella" id = '0H8' onclick="clickCas('0H8')"></button></td>
+              <td><button type="button" class="casella" id = '0I8' onclick="clickCas('0I8')"></button></td>
+              <td><button type="button" class="casella" id = '0J8' onclick="clickCas('0J8')"></button></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><button type="button" class="casella" id = '0A7' onclick="clickCas('0A7')"></button></td>
+              <td><button type="button" class="casella" id = '0B7' onclick="clickCas('0B7')"></button></td>
+              <td><button type="button" class="casella" id = '0C7' onclick="clickCas('0C7')"></button></td>
+              <td><button type="button" class="casella" id = '0D7' onclick="clickCas('0D7')"></button></td>
+              <td><button type="button" class="casella" id = '0E7' onclick="clickCas('0E7')"></button></td>
+              <td><button type="button" class="casella" id = '0F7' onclick="clickCas('0F7')"></button></td>
+              <td><button type="button" class="casella" id = '0G7' onclick="clickCas('0G7')"></button></td>
+              <td><button type="button" class="casella" id = '0H7' onclick="clickCas('0H7')"></button></td>
+              <td><button type="button" class="casella" id = '0I7' onclick="clickCas('0I7')"></button></td>
+              <td><button type="button" class="casella" id = '0J7' onclick="clickCas('0J7')"></button></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><button type="button" class="casella" id = '0A6' onclick="clickCas('0A6')"></button></td>
+              <td><button type="button" class="casella" id = '0B6' onclick="clickCas('0B6')"></button></td>
+              <td><button type="button" class="casella" id = '0C6' onclick="clickCas('0C6')"></button></td>
+              <td><button type="button" class="casella" id = '0D6' onclick="clickCas('0D6')"></button></td>
+              <td><button type="button" class="casella" id = '0E6' onclick="clickCas('0E6')"></button></td>
+              <td><button type="button" class="casella" id = '0F6' onclick="clickCas('0F6')"></button></td>
+              <td><button type="button" class="casella" id = '0G6' onclick="clickCas('0G6')"></button></td>
+              <td><button type="button" class="casella" id = '0H6' onclick="clickCas('0H6')"></button></td>
+              <td><button type="button" class="casella" id = '0I6' onclick="clickCas('0I6')"></button></td>
+              <td><button type="button" class="casella" id = '0J6' onclick="clickCas('0J6')"></button></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><button type="button" class="casella" id = '0A5' onclick="clickCas('0A5')"></button></td>
+              <td><button type="button" class="casella" id = '0B5' onclick="clickCas('0B5')"></button></td>
+              <td><button type="button" class="casella" id = '0C5' onclick="clickCas('0C5')"></button></td>
+              <td><button type="button" class="casella" id = '0D5' onclick="clickCas('0D5')"></button></td>
+              <td><button type="button" class="casella" id = '0E5' onclick="clickCas('0E5')"></button></td>
+              <td><button type="button" class="casella" id = '0F5' onclick="clickCas('0F5')"></button></td>
+              <td><button type="button" class="casella" id = '0G5' onclick="clickCas('0G5')"></button></td>
+              <td><button type="button" class="casella" id = '0H5' onclick="clickCas('0H5')"></button></td>
+              <td><button type="button" class="casella" id = '0I5' onclick="clickCas('0I5')"></button></td>
+              <td><button type="button" class="casella" id = '0J5' onclick="clickCas('0J5')"></button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><button type="button" class="casella" id = '0A4' onclick="clickCas('0A4')"></button></td>
+              <td><button type="button" class="casella" id = '0B4' onclick="clickCas('0B4')"></button></td>
+              <td><button type="button" class="casella" id = '0C4' onclick="clickCas('0C4')"></button></td>
+              <td><button type="button" class="casella" id = '0D4' onclick="clickCas('0D4')"></button></td>
+              <td><button type="button" class="casella" id = '0E4' onclick="clickCas('0E4')"></button></td>
+              <td><button type="button" class="casella" id = '0F4' onclick="clickCas('0F4')"></button></td>
+              <td><button type="button" class="casella" id = '0G4' onclick="clickCas('0G4')"></button></td>
+              <td><button type="button" class="casella" id = '0H4' onclick="clickCas('0H4')"></button></td>
+              <td><button type="button" class="casella" id = '0I4' onclick="clickCas('0I4')"></button></td>
+              <td><button type="button" class="casella" id = '0J4' onclick="clickCas('0J4')"></button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><button type="button" class="casella" id = '0A3' onclick="clickCas('0A3')"></button></td>
+              <td><button type="button" class="casella" id = '0B3' onclick="clickCas('0B3')"></button></td>
+              <td><button type="button" class="casella" id = '0C3' onclick="clickCas('0C3')"></button></td>
+              <td><button type="button" class="casella" id = '0D3' onclick="clickCas('0D3')"></button></td>
+              <td><button type="button" class="casella" id = '0E3' onclick="clickCas('0E3')"></button></td>
+              <td><button type="button" class="casella" id = '0F3' onclick="clickCas('0F3')"></button></td>
+              <td><button type="button" class="casella" id = '0G3' onclick="clickCas('0G3')"></button></td>
+              <td><button type="button" class="casella" id = '0H3' onclick="clickCas('0H3')"></button></td>
+              <td><button type="button" class="casella" id = '0I3' onclick="clickCas('0I3')"></button></td>
+              <td><button type="button" class="casella" id = '0J3' onclick="clickCas('0J3')"></button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><button type="button" class="casella" id = '0A2' onclick="clickCas('0A2')"></button></td>
+              <td><button type="button" class="casella" id = '0B2' onclick="clickCas('0B2')"></button></td>
+              <td><button type="button" class="casella" id = '0C2' onclick="clickCas('0C2')"></button></td>
+              <td><button type="button" class="casella" id = '0D2' onclick="clickCas('0D2')"></button></td>
+              <td><button type="button" class="casella" id = '0E2' onclick="clickCas('0E2')"></button></td>
+              <td><button type="button" class="casella" id = '0F2' onclick="clickCas('0F2')"></button></td>
+              <td><button type="button" class="casella" id = '0G2' onclick="clickCas('0G2')"></button></td>
+              <td><button type="button" class="casella" id = '0H2' onclick="clickCas('0H2')"></button></td>
+              <td><button type="button" class="casella" id = '0I2' onclick="clickCas('0I2')"></button></td>
+              <td><button type="button" class="casella" id = '0J2' onclick="clickCas('0J2')"></button></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><button type="button" class="casella" id = '0A1' onclick="clickCas('0A1')"></button></td>
+              <td><button type="button" class="casella" id = '0B1' onclick="clickCas('0B1')"></button></td>
+              <td><button type="button" class="casella" id = '0C1' onclick="clickCas('0C1')"></button></td>
+              <td><button type="button" class="casella" id = '0D1' onclick="clickCas('0D1')"></button></td>
+              <td><button type="button" class="casella" id = '0E1' onclick="clickCas('0E1')"></button></td>
+              <td><button type="button" class="casella" id = '0F1' onclick="clickCas('0F1')"></button></td>
+              <td><button type="button" class="casella" id = '0G1' onclick="clickCas('0G1')"></button></td>
+              <td><button type="button" class="casella" id = '0H1' onclick="clickCas('0H1')"></button></td>
+              <td><button type="button" class="casella" id = '0I1' onclick="clickCas('0I1')"></button></td>
+              <td><button type="button" class="casella" id = '0J1' onclick="clickCas('0J1')"></button></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp; A</td>
+              <td>&nbsp; B</td>
+              <td>&nbsp; C</td>
+              <td>&nbsp; D</td>
+              <td>&nbsp; E</td>
+              <td>&nbsp; F</td>
+              <td>&nbsp; G</td>
+              <td>&nbsp; H</td>
+              <td>&nbsp; I</td>
+              <td>&nbsp; J</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+            <div class="verticalLine"></div>
+        </td>
+        <td>
+            <legend><h3>Seconda flotta</h3></legend>
+
+            <table id="table2">
+                <tr>
+                  <td>10</td>
+                  <td><button type="button" class="casella" id = '1A10' onclick="clickCas('1A10')"></button></td>
+                  <td><button type="button" class="casella" id = '1B10' onclick="clickCas('1B10')"></button></td>
+                  <td><button type="button" class="casella" id = '1C10' onclick="clickCas('1C10')"></button></td>
+                  <td><button type="button" class="casella" id = '1D10' onclick="clickCas('1D10')"></button></td>
+                  <td><button type="button" class="casella" id = '1E10' onclick="clickCas('1E10')"></button></td>
+                  <td><button type="button" class="casella" id = '1F10' onclick="clickCas('1F10')"></button></td>
+                  <td><button type="button" class="casella" id = '1G10' onclick="clickCas('1G10')"></button></td>
+                  <td><button type="button" class="casella" id = '1H10' onclick="clickCas('1H10')"></button></td>
+                  <td><button type="button" class="casella" id = '1I10' onclick="clickCas('1I10')"></button></td>
+                  <td><button type="button" class="casella" id = '1J10' onclick="clickCas('1J10')"></button></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><button type="button" class="casella" id = '1A9' onclick="clickCas('1A9')"></button></td>
+                  <td><button type="button" class="casella" id = '1B9' onclick="clickCas('1B9')"></button></td>
+                  <td><button type="button" class="casella" id = '1C9' onclick="clickCas('1C9')"></button></td>
+                  <td><button type="button" class="casella" id = '1D9' onclick="clickCas('1D9')"></button></td>
+                  <td><button type="button" class="casella" id = '1E9' onclick="clickCas('1E9')"></button></td>
+                  <td><button type="button" class="casella" id = '1F9' onclick="clickCas('1F9')"></button></td>
+                  <td><button type="button" class="casella" id = '1G9' onclick="clickCas('1G9')"></button></td>
+                  <td><button type="button" class="casella" id = '1H9' onclick="clickCas('1H9')"></button></td>
+                  <td><button type="button" class="casella" id = '1I9' onclick="clickCas('1I9')"></button></td>
+                  <td><button type="button" class="casella" id = '1J9' onclick="clickCas('1J9')"></button></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td><button type="button" class="casella" id = '1A8' onclick="clickCas('1A8')"></button></td>
+                  <td><button type="button" class="casella" id = '1B8' onclick="clickCas('1B8')"></button></td>
+                  <td><button type="button" class="casella" id = '1C8' onclick="clickCas('1C8')"></button></td>
+                  <td><button type="button" class="casella" id = '1D8' onclick="clickCas('1D8')"></button></td>
+                  <td><button type="button" class="casella" id = '1E8' onclick="clickCas('1E8')"></button></td>
+                  <td><button type="button" class="casella" id = '1F8' onclick="clickCas('1F8')"></button></td>
+                  <td><button type="button" class="casella" id = '1G8' onclick="clickCas('1G8')"></button></td>
+                  <td><button type="button" class="casella" id = '1H8' onclick="clickCas('1H8')"></button></td>
+                  <td><button type="button" class="casella" id = '1I8' onclick="clickCas('1I8')"></button></td>
+                  <td><button type="button" class="casella" id = '1J8' onclick="clickCas('1J8')"></button></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><button type="button" class="casella" id = '1A7' onclick="clickCas('1A7')"></button></td>
+                  <td><button type="button" class="casella" id = '1B7' onclick="clickCas('1B7')"></button></td>
+                  <td><button type="button" class="casella" id = '1C7' onclick="clickCas('1C7')"></button></td>
+                  <td><button type="button" class="casella" id = '1D7' onclick="clickCas('1D7')"></button></td>
+                  <td><button type="button" class="casella" id = '1E7' onclick="clickCas('1E7')"></button></td>
+                  <td><button type="button" class="casella" id = '1F7' onclick="clickCas('1F7')"></button></td>
+                  <td><button type="button" class="casella" id = '1G7' onclick="clickCas('1G7')"></button></td>
+                  <td><button type="button" class="casella" id = '1H7' onclick="clickCas('1H7')"></button></td>
+                  <td><button type="button" class="casella" id = '1I7' onclick="clickCas('1I7')"></button></td>
+                  <td><button type="button" class="casella" id = '1J7' onclick="clickCas('1J7')"></button></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td><button type="button" class="casella" id = '1A6' onclick="clickCas('1A6')"></button></td>
+                  <td><button type="button" class="casella" id = '1B6' onclick="clickCas('1B6')"></button></td>
+                  <td><button type="button" class="casella" id = '1C6' onclick="clickCas('1C6')"></button></td>
+                  <td><button type="button" class="casella" id = '1D6' onclick="clickCas('1D6')"></button></td>
+                  <td><button type="button" class="casella" id = '1E6' onclick="clickCas('1E6')"></button></td>
+                  <td><button type="button" class="casella" id = '1F6' onclick="clickCas('1F6')"></button></td>
+                  <td><button type="button" class="casella" id = '1G6' onclick="clickCas('1G6')"></button></td>
+                  <td><button type="button" class="casella" id = '1H6' onclick="clickCas('1H6')"></button></td>
+                  <td><button type="button" class="casella" id = '1I6' onclick="clickCas('1I6')"></button></td>
+                  <td><button type="button" class="casella" id = '1J6' onclick="clickCas('1J6')"></button></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><button type="button" class="casella" id = '1A5' onclick="clickCas('1A5')"></button></td>
+                  <td><button type="button" class="casella" id = '1B5' onclick="clickCas('1B5')"></button></td>
+                  <td><button type="button" class="casella" id = '1C5' onclick="clickCas('1C5')"></button></td>
+                  <td><button type="button" class="casella" id = '1D5' onclick="clickCas('1D5')"></button></td>
+                  <td><button type="button" class="casella" id = '1E5' onclick="clickCas('1E5')"></button></td>
+                  <td><button type="button" class="casella" id = '1F5' onclick="clickCas('1F5')"></button></td>
+                  <td><button type="button" class="casella" id = '1G5' onclick="clickCas('1G5')"></button></td>
+                  <td><button type="button" class="casella" id = '1H5' onclick="clickCas('1H5')"></button></td>
+                  <td><button type="button" class="casella" id = '1I5' onclick="clickCas('1I5')"></button></td>
+                  <td><button type="button" class="casella" id = '1J5' onclick="clickCas('1J5')"></button></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><button type="button" class="casella" id = '1A4' onclick="clickCas('1A4')"></button></td>
+                  <td><button type="button" class="casella" id = '1B4' onclick="clickCas('1B4')"></button></td>
+                  <td><button type="button" class="casella" id = '1C4' onclick="clickCas('1C4')"></button></td>
+                  <td><button type="button" class="casella" id = '1D4' onclick="clickCas('1D4')"></button></td>
+                  <td><button type="button" class="casella" id = '1E4' onclick="clickCas('1E4')"></button></td>
+                  <td><button type="button" class="casella" id = '1F4' onclick="clickCas('1F4')"></button></td>
+                  <td><button type="button" class="casella" id = '1G4' onclick="clickCas('1G4')"></button></td>
+                  <td><button type="button" class="casella" id = '1H4' onclick="clickCas('1H4')"></button></td>
+                  <td><button type="button" class="casella" id = '1I4' onclick="clickCas('1I4')"></button></td>
+                  <td><button type="button" class="casella" id = '1J4' onclick="clickCas('1J4')"></button></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><button type="button" class="casella" id = '1A3' onclick="clickCas('1A3')"></button></td>
+                  <td><button type="button" class="casella" id = '1B3' onclick="clickCas('1B3')"></button></td>
+                  <td><button type="button" class="casella" id = '1C3' onclick="clickCas('1C3')"></button></td>
+                  <td><button type="button" class="casella" id = '1D3' onclick="clickCas('1D3')"></button></td>
+                  <td><button type="button" class="casella" id = '1E3' onclick="clickCas('1E3')"></button></td>
+                  <td><button type="button" class="casella" id = '1F3' onclick="clickCas('1F3')"></button></td>
+                  <td><button type="button" class="casella" id = '1G3' onclick="clickCas('1G3')"></button></td>
+                  <td><button type="button" class="casella" id = '1H3' onclick="clickCas('1H3')"></button></td>
+                  <td><button type="button" class="casella" id = '1I3' onclick="clickCas('1I3')"></button></td>
+                  <td><button type="button" class="casella" id = '1J3' onclick="clickCas('1J3')"></button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><button type="button" class="casella" id = '1A2' onclick="clickCas('1A2')"></button></td>
+                  <td><button type="button" class="casella" id = '1B2' onclick="clickCas('1B2')"></button></td>
+                  <td><button type="button" class="casella" id = '1C2' onclick="clickCas('1C2')"></button></td>
+                  <td><button type="button" class="casella" id = '1D2' onclick="clickCas('1D2')"></button></td>
+                  <td><button type="button" class="casella" id = '1E2' onclick="clickCas('1E2')"></button></td>
+                  <td><button type="button" class="casella" id = '1F2' onclick="clickCas('1F2')"></button></td>
+                  <td><button type="button" class="casella" id = '1G2' onclick="clickCas('1G2')"></button></td>
+                  <td><button type="button" class="casella" id = '1H2' onclick="clickCas('1H2')"></button></td>
+                  <td><button type="button" class="casella" id = '1I2' onclick="clickCas('1I2')"></button></td>
+                  <td><button type="button" class="casella" id = '1J2' onclick="clickCas('1J2')"></button></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td><button type="button" class="casella" id = '1A1' onclick="clickCas('1A1')"></button></td>
+                  <td><button type="button" class="casella" id = '1B1' onclick="clickCas('1B1')"></button></td>
+                  <td><button type="button" class="casella" id = '1C1' onclick="clickCas('1C1')"></button></td>
+                  <td><button type="button" class="casella" id = '1D1' onclick="clickCas('1D1')"></button></td>
+                  <td><button type="button" class="casella" id = '1E1' onclick="clickCas('1E1')"></button></td>
+                  <td><button type="button" class="casella" id = '1F1' onclick="clickCas('1F1')"></button></td>
+                  <td><button type="button" class="casella" id = '1G1' onclick="clickCas('1G1')"></button></td>
+                  <td><button type="button" class="casella" id = '1H1' onclick="clickCas('1H1')"></button></td>
+                  <td><button type="button" class="casella" id = '1I1' onclick="clickCas('1I1')"></button></td>
+                  <td><button type="button" class="casella" id = '1J1' onclick="clickCas('1J1')"></button></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp; A</td>
+                  <td>&nbsp; B</td>
+                  <td>&nbsp; C</td>
+                  <td>&nbsp; D</td>
+                  <td>&nbsp; E</td>
+                  <td>&nbsp; F</td>
+                  <td>&nbsp; G</td>
+                  <td>&nbsp; H</td>
+                  <td>&nbsp; I</td>
+                  <td>&nbsp; J</td>
+                </tr>
+              </table>
+        </td>
+        </tr>
+    </table>
+    <br><br>
+    
+      <table class="center">
+        <tr>
+          <td><input type="radio" id="vertical"name="orientation" value="vertical">
+            <label for="vertical">Vertical</label><br>
+            <input type="radio" id="horizontal" name="orientation" value="horizontal">
+            <label for="horizontal">Horizontal</label>
+          </td>
+          <td><textarea id="log" rows="7" cols="50" readonly>Selezionare le navi sul proprio campo in questo modo:
+2 navi da 1 casella
+1 nave da 2 caselle (selezionare il verso)
+2 nave da 3 caselle (selezionare il verso)
+1 nave da 5 caselle (selezionare il verso)
+            </textarea>
+          </td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

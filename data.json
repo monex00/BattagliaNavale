@@ -1,0 +1,1 @@
+data = '[{"x" : "G", "y" : "1", "orientation" : "vertical"}, {"x" : "G", "y" : "2", "orientation" : "vertical"}, {"x" : "D", "y" : "3" , "orientation" : "vertical"}, {"x" : "C", "y" : "6" , "orientation" : "orizontal"}, {"x" : "E", "y" : "8" , "orientation" : "vertical"}, {"x" : "C", "y" : "5" , "orientation" : "orizontal"}]';
